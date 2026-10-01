@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — Sprig</title>
+  <meta name="description" content="How the Sprig plant care app handles your photos, plants and other data.">
+  <link rel="icon" type="image/png" href="assets/icons/ic_timelapse.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Young+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="wrap top">
+    <a class="brand" href="./"><span class="tile"><img src="assets/icons/ic_timelapse.png" alt=""></span><span>Sprig</span></a>
+    <nav><a href="terms.html">Terms</a><a href="mailto:leemint2802@gmail.com">Support</a></nav>
+  </header>
+
+  <main class="legal">
+    <span class="overline">Legal</span>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Effective 1 October 2026</p>
+
+    <div class="box">
+      <p><strong>The short version.</strong> Sprig has no accounts and no sign-up. Your plants, notes, chats and photos are stored on your phone. A photo you scan, and a question you ask in chat, are sent to our server once to be answered and are not stored there. We don't sell your data, and we don't use it for advertising.</p>
+    </div>
+
+    <p>This policy explains what the Sprig app for iPhone ("Sprig", "the app", "we", "us") collects, why, who processes it, and the choices you have. If you have a question, email <a href="mailto:leemint2802@gmail.com">leemint2802@gmail.com</a>.</p>
+
+    <h2>1. What stays on your phone</h2>
+    <p>Your garden lives in a database on your device: plant names, species, locations, watering and feeding schedules, care you log, notes, diagnoses, chat conversations, and the photos you take (scans and growth photos). We don't have a copy. Deleting the app deletes this data. Reminders are local notifications scheduled on your phone; no reminder data is sent to us.</p>
+
+    <h2>2. What leaves your phone, and why</h2>
+
+    <h3>Scans (diagnose and identify)</h3>
+    <p>When you scan, the photo (resized to about 1600 pixels) is sent to our server, which passes it to our AI provider to identify the plant and look for disease. The answer comes back to your phone. Our server holds the photo in memory only for that request and never writes it to storage.</p>
+
+    <h3>Chat</h3>
+    <p>When you ask a question, your recent messages in that conversation are sent with it — at most the last 12 — and, if the conversation is about one of your plants, that plant's details: its name, species, location, schedule and last care dates, care guide, any open diagnosis and your five most recent notes about it. Plant photos are never sent with a chat message. If you're a Premium user and attach a photo, it is scanned as described above. Nothing from the conversation is stored on our server.</p>
+
+    <h3>An anonymous install ID</h3>
+    <p>On first launch the app creates a random identifier (a UUID) and keeps it in your iPhone's Keychain. It is not linked to your name, email or Apple ID. We use it to: count your free scan and your free chat questions per day; check whether you have Premium; and connect app analytics, crash reports and purchases to the same install, so we can tell, for example, whether people who turn on reminders keep using the app.</p>
+
+    <h3>Purchases</h3>
+    <p>Payments are handled by Apple. We never see your payment details. Our subscription provider receives your purchase receipts from Apple together with the install ID, so that Premium unlocks on your devices and can be restored.</p>
+
+    <h3>Usage analytics</h3>
+    <p>The app records events such as "scan completed", "plant added", "reminders turned on", "paywall shown" or "timelapse exported", with details like the scan mode or which screen a paywall was opened from, plus basic device and app information (model, iOS version, app version, language). Events never contain your photos, the text of your notes or chat messages, or your plants' names.</p>
+
+    <h3>Crash reports and app integrity</h3>
+    <p>If the app crashes, a crash report (stack trace, device model, iOS and app version, install ID) is sent so we can fix it. Before talking to our server the app proves it is the genuine app on a real device (Apple App Attest via Firebase App Check); this involves a device-integrity token, not personal data. The app also downloads configuration values, such as how many free scans there are.</p>
+
+    <h2>3. Who processes your data</h2>
+    <table>
+      <tr><th>Provider</th><th>What for</th><th>What they receive</th></tr>
+      <tr><td>OpenAI</td><td>Identifying plants, diagnosing disease, answering chat questions</td><td>Scan photos; chat messages and plant details as described above. Sent with storage turned off. Under OpenAI's API terms this data is not used to train their models; OpenAI may keep it for up to 30 days to detect abuse.</td></tr>
+      <tr><td>Cloudflare</td><td>Hosting our server</td><td>Scan and chat requests in transit; small counters keyed by install ID (free scans used, chat questions per day)</td></tr>
+      <tr><td>RevenueCat</td><td>Managing subscriptions</td><td>Install ID, App Store purchase receipts</td></tr>
+      <tr><td>PostHog</td><td>Product analytics</td><td>Install ID, usage events, device and app information</td></tr>
+      <tr><td>Google Firebase</td><td>Crash reporting (Crashlytics), configuration (Remote Config), app integrity (App Check)</td><td>Crash reports with install ID; device-integrity tokens</td></tr>
+      <tr><td>Apple</td><td>Payments, App Attest</td><td>Handled under Apple's own privacy policy</td></tr>
+    </table>
+    <p>Each provider processes data on our behalf under its own terms and privacy policy. Some are in the United States, so your data may be processed outside your country.</p>
+
+    <h2>4. What we don't do</h2>
+    <ul>
+      <li>We don't ask for your name, email, phone number or location.</li>
+      <li>We don't sell or rent your data, or share it for advertising.</li>
+      <li>We don't track you across other apps or websites.</li>
+      <li>We don't store your photos on our servers.</li>
+    </ul>
+
+    <h2>5. How long we keep it</h2>
+    <ul>
+      <li>Data on your phone: until you delete it in the app or delete the app.</li>
+      <li>Photos and chat messages sent for an answer: not kept on our server after the request.</li>
+      <li>Daily chat counters: deleted automatically after three days. The free-scan count is kept so the free scan isn't granted again after a reinstall.</li>
+      <li>Analytics and crash reports: kept for up to 24 months, then deleted or aggregated.</li>
+      <li>Purchase records: as long as needed for your subscription and for tax and accounting obligations.</li>
+    </ul>
+
+    <h2>6. Your choices and rights</h2>
+    <ul>
+      <li><strong>Photos and camera:</strong> the app asks before using the camera or adding videos to your Photos library. You can change this in iOS Settings.</li>
+      <li><strong>Notifications:</strong> asked only after you say yes in the app; turn them off any time in the app's Settings or in iOS Settings.</li>
+      <li><strong>Delete your data:</strong> delete plants or chats in the app, or delete the app. To ask us to delete analytics, crash or purchase records linked to your install, email us — the app's Settings screen shows the version you're on, and we'll help you find your install ID.</li>
+      <li>Depending on where you live (for example in the EU, UK or California) you may have rights to access, correct, delete or object to the processing of your personal data. Email us to use them; we'll answer within 30 days.</li>
+    </ul>
+
+    <h2>7. Children</h2>
+    <p>Sprig isn't directed at children under 13 and we don't knowingly collect their personal data. If you believe a child has sent us personal data, email us and we'll delete it.</p>
+
+    <h2>8. Security</h2>
+    <p>Data in transit is encrypted (HTTPS). Our server only accepts requests from the genuine app, uses short-lived session tokens, and holds photos in memory only. No method of transmission or storage is perfectly secure, but we keep what leaves your phone to a minimum.</p>
+
+    <h2>9. Changes</h2>
+    <p>If we change this policy we'll update the date at the top, and for significant changes we'll tell you in the app.</p>
+
+    <h2>10. Contact</h2>
+    <p>Email <a href="mailto:leemint2802@gmail.com">leemint2802@gmail.com</a>.</p>
+  </main>
+
+  <footer>
+    <div class="wrap row">
+      <span>© 2026 Sprig</span>
+      <nav><a href="./">Home</a><a href="terms.html">Terms of Service</a><a href="mailto:leemint2802@gmail.com">Support</a></nav>
+    </div>
+  </footer>
+</body>
+</html>
