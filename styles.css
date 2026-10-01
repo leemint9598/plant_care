@@ -119,18 +119,20 @@ section > .wrap > p.sub { color: var(--text-body); max-width: 620px; margin: 0 0
 
 .timelapse {
   background: var(--dark); color: var(--dark-text); border-radius: 12px; padding: 40px;
-  display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center;
+  display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px;
 }
+.timelapse > div:first-child { max-width: 620px; }
 .timelapse h2 { color: var(--dark-text); }
 .timelapse p { color: var(--dark-sub); }
 .timelapse .overline { color: var(--accent); }
-.strip { display: flex; gap: 6px; }
-.strip figure { flex: 1; margin: 0; position: relative; }
+.strip { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 10px; }
+.strip figure { margin: 0; position: relative; min-width: 0; }
 .strip img { width: 100%; aspect-ratio: 9 / 16; border-radius: 6px; object-fit: cover; }
 .strip figure:last-child img { outline: 2.5px solid var(--bg-page); outline-offset: -2.5px; }
 .strip figcaption {
   position: absolute; left: 4px; top: 4px; padding: 1px 5px; border-radius: 4px;
-  background: var(--brand); color: var(--on-brand); font-size: 10.5px; font-weight: 700;
+  background: var(--brand); color: var(--on-brand); font-size: 12px; font-weight: 700;
+  white-space: nowrap; line-height: 1.5;
 }
 .timelapse .tag { display: inline-block; margin-top: 8px; color: var(--accent); font-weight: 600; }
 
@@ -190,9 +192,6 @@ footer a { color: var(--text-body); font-weight: 600; text-decoration: none; }
 /* --- App Store: live after launch, "coming soon" before -------------- */
 body.prelaunch .store-live { display: none !important; }
 body:not(.prelaunch) .store-soon { display: none !important; }
-.qr { display: flex; gap: 14px; align-items: center; margin-top: 22px; font-size: 14px; color: var(--text-muted); }
-.qr img { border-radius: 8px; border: 1px solid var(--border); }
-.qr b { color: var(--text-primary); }
 .get {
   background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 36px 40px;
   display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: center;
@@ -201,6 +200,13 @@ body:not(.prelaunch) .store-soon { display: none !important; }
 .get img { border-radius: 10px; }
 .get img.art { width: 260px; border-radius: 0; }
 @media (max-width: 820px) {
-  .qr, .get img { display: none !important; }  /* on the phone already: the button is enough */
+  .get img.art { display: none; }
   .get { grid-template-columns: 1fr; padding: 26px 22px; }
+}
+
+.btn .apple { width: 17px; height: 20px; flex: none; margin-top: -2px; }
+@media (max-width: 520px) {
+  .strip { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .strip { gap: 6px; }
+  .strip figure:nth-child(-n+3) { display: none; }  /* phones: the last four weeks */
 }
