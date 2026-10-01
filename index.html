@@ -15,7 +15,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Young+Serif&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<!-- Launch day: remove class="prelaunch" and the App Store button and QR code go live. -->
+<body class="prelaunch">
   <header class="wrap top">
     <a class="brand" href="./"><span class="tile"><img src="assets/icons/ic_timelapse.png" alt=""></span><span>Sprig</span></a>
     <nav>
@@ -32,10 +33,15 @@
         <h1>Know what your plant needs</h1>
         <p class="lead">Snap a photo of a sick plant and find out what's wrong and what to do today. Sprig builds the watering schedule, reminds you when it's due, and turns your weekly photos into a growth timelapse.</p>
         <div class="cta">
-          <span class="btn dark" aria-label="Coming soon to the App Store"> Coming soon to the App Store</span>
+          <a class="btn dark store-live" href="https://apps.apple.com/app/id6817727547"> Download on the App Store</a>
+          <span class="btn dark store-soon"> Coming soon to the App Store</span>
           <a class="btn outline" href="#features">See how it works</a>
         </div>
         <p class="note">No account needed. Your plants and photos stay on your phone.</p>
+        <div class="qr store-live">
+          <img src="assets/appstore-qr.svg" alt="QR code for Sprig on the App Store" width="96" height="96">
+          <span><b>On your computer?</b><br>Scan with your iPhone camera to get Sprig.</span>
+        </div>
       </div>
       <div class="hero-art" aria-hidden="true">
         <span class="chip alert">Act this week</span>
@@ -90,8 +96,14 @@
             <p>Take one photo a week from the same spot. Last week's photo shows faintly over the camera so every frame lines up. Sprig turns them into a 9:16 video ready to share.</p>
             <span class="tag">Unlimited, and free forever.</span>
           </div>
-          <div class="strip" aria-hidden="true">
-            <span style="background:#24352B"></span><span style="background:#34503A"></span><span style="background:#4A6E48"></span><span style="background:#648C57"></span><span style="background:#86AE6E"></span><span style="background:#A9CF8C"></span><span style="background:#CFE3A0"></span>
+          <div class="strip" role="img" aria-label="Seven weekly photos of one plant in the same pot, growing from a seedling to a tomato plant">
+            <figure><img src="assets/growth/frame-1.svg" alt=""><figcaption>Wk 1</figcaption></figure>
+            <figure><img src="assets/growth/frame-2.svg" alt=""><figcaption>Wk 2</figcaption></figure>
+            <figure><img src="assets/growth/frame-3.svg" alt=""><figcaption>Wk 3</figcaption></figure>
+            <figure><img src="assets/growth/frame-4.svg" alt=""><figcaption>Wk 4</figcaption></figure>
+            <figure><img src="assets/growth/frame-5.svg" alt=""><figcaption>Wk 5</figcaption></figure>
+            <figure><img src="assets/growth/frame-6.svg" alt=""><figcaption>Wk 6</figcaption></figure>
+            <figure><img src="assets/growth/frame-7.svg" alt=""><figcaption>Wk 7</figcaption></figure>
           </div>
         </div>
       </div>
@@ -150,6 +162,21 @@
         <details><summary>What happens to my photos?</summary><p>They stay on your phone. When you scan, the photo is sent once to be analysed and is not kept on our servers. See the <a href="privacy.html">privacy policy</a> for the details.</p></details>
         <details><summary>How do I cancel my subscription?</summary><p>On your iPhone: Settings → your name → Subscriptions → Sprig → Cancel. You keep Premium until the end of the period you paid for.</p></details>
         <details><summary>I need help.</summary><p>Email <a href="mailto:leemint2802@gmail.com">leemint2802@gmail.com</a> — a real person reads every message.</p></details>
+      </div>
+    </section>
+    <section id="download">
+      <div class="wrap">
+        <div class="get">
+          <div>
+            <span class="overline">Get Sprig</span>
+            <h2>Your first scan is free</h2>
+            <p class="sub">Free on the App Store for iPhone. No account needed.</p>
+            <a class="btn primary store-live" href="https://apps.apple.com/app/id6817727547"> Download on the App Store</a>
+            <span class="btn outline store-soon">Coming soon to the App Store</span>
+          </div>
+          <img class="store-live" src="assets/appstore-qr.svg" alt="QR code for Sprig on the App Store" width="160" height="160">
+          <img class="store-soon art" src="assets/img/ill_empty_chat.png" alt="An orange cat looking up at a tomato plant">
+        </div>
       </div>
     </section>
   </main>
