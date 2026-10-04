@@ -1,6 +1,6 @@
-# Sprig — website
+# Plipo — website
 
-Landing page, Privacy Policy and Terms of Service for the Sprig plant care app
+Landing page, Privacy Policy and Terms of Service for the Plipo plant care app
 (Flutter source in `../flutter_plant_id`). Plain HTML and CSS, no build step; the colours,
 fonts and painted icons are the app's Herbarium design.
 
