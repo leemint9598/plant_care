@@ -20,7 +20,7 @@
   <main class="legal">
     <span class="overline">Legal</span>
     <h1>Privacy Policy</h1>
-    <p class="updated">Effective 1 October 2026</p>
+    <p class="updated">Effective 5 October 2026</p>
 
     <div class="box">
       <p><strong>The short version.</strong> Plipo has no accounts and no sign-up. Your plants, notes, chats and photos are stored on your phone. A photo you scan, and a question you ask in chat, are sent to our server once to be answered and are not stored there. We don't sell your data, and we don't use it for advertising.</p>
@@ -48,6 +48,9 @@
     <h3>Usage analytics</h3>
     <p>The app records events such as "scan completed", "plant added", "reminders turned on", "paywall shown" or "timelapse exported", with details like the scan mode or which screen a paywall was opened from, plus basic device and app information (model, iOS version, app version, language). Events never contain your photos, the text of your notes or chat messages, or your plants' names.</p>
 
+    <h3>Weather alerts (optional)</h3>
+    <p>Weather alerts are off until you turn them on. If you do, the app asks iOS for your location with the coarsest accuracy it offers, only while the app is open, and rounds it on your phone to about 50 km (0.5°). Only that rounded area and your time zone are sent to our server, which asks Apple WeatherKit for the week's forecast and keeps it for three hours for everyone in the same area. The area is not stored with your install ID. You can turn alerts off in the app's Settings, or remove location access in iOS Settings.</p>
+
     <h3>Crash reports and app integrity</h3>
     <p>If the app crashes, a crash report (stack trace, device model, iOS and app version, install ID) is sent so we can fix it. Before talking to our server the app proves it is the genuine app on a real device (Apple App Attest via Firebase App Check); this involves a device-integrity token, not personal data. The app also downloads configuration values, such as how many free scans there are.</p>
 
@@ -55,17 +58,17 @@
     <table>
       <tr><th>Provider</th><th>What for</th><th>What they receive</th></tr>
       <tr><td>OpenAI</td><td>Identifying plants, diagnosing disease, answering chat questions</td><td>Scan photos; chat messages and plant details as described above. Sent with storage turned off. Under OpenAI's API terms this data is not used to train their models; OpenAI may keep it for up to 30 days to detect abuse.</td></tr>
-      <tr><td>Cloudflare</td><td>Hosting our server</td><td>Scan and chat requests in transit; small counters keyed by install ID (free scans used, chat questions per day)</td></tr>
+      <tr><td>Cloudflare</td><td>Hosting our server</td><td>Scan and chat requests in transit; small counters keyed by install ID (free scans used, chat questions per day); forecasts cached by rounded area</td></tr>
       <tr><td>RevenueCat</td><td>Managing subscriptions</td><td>Install ID, App Store purchase receipts</td></tr>
       <tr><td>PostHog</td><td>Product analytics</td><td>Install ID, usage events, device and app information</td></tr>
       <tr><td>Google Firebase</td><td>Crash reporting (Crashlytics), configuration (Remote Config), app integrity (App Check)</td><td>Crash reports with install ID; device-integrity tokens</td></tr>
-      <tr><td>Apple</td><td>Payments, App Attest</td><td>Handled under Apple's own privacy policy</td></tr>
+      <tr><td>Apple</td><td>Payments, App Attest, weather forecasts (WeatherKit)</td><td>Handled under Apple's own privacy policy; WeatherKit receives only the rounded area, from our server</td></tr>
     </table>
     <p>Each provider processes data on our behalf under its own terms and privacy policy. Some are in the United States, so your data may be processed outside your country.</p>
 
     <h2>4. What we don't do</h2>
     <ul>
-      <li>We don't ask for your name, email, phone number or location.</li>
+      <li>We don't ask for your name, email or phone number. We ask for your location only if you turn on weather alerts, and only a rounded area leaves your phone.</li>
       <li>We don't sell or rent your data, or share it for advertising.</li>
       <li>We don't track you across other apps or websites.</li>
       <li>We don't store your photos on our servers.</li>
@@ -75,6 +78,7 @@
     <ul>
       <li>Data on your phone: until you delete it in the app or delete the app.</li>
       <li>Photos and chat messages sent for an answer: not kept on our server after the request.</li>
+      <li>Forecasts for a rounded area: three hours.</li>
       <li>Daily chat counters: deleted automatically after three days. The free-scan count is kept so the free scan isn't granted again after a reinstall.</li>
       <li>Analytics and crash reports: kept for up to 24 months, then deleted or aggregated.</li>
       <li>Purchase records: as long as needed for your subscription and for tax and accounting obligations.</li>
@@ -83,6 +87,7 @@
     <h2>6. Your choices and rights</h2>
     <ul>
       <li><strong>Photos and camera:</strong> the app asks before using the camera or adding videos to your Photos library. You can change this in iOS Settings.</li>
+      <li><strong>Location:</strong> asked only when you turn on weather alerts; turn alerts off in the app's Settings or remove access in iOS Settings.</li>
       <li><strong>Notifications:</strong> asked only after you say yes in the app; turn them off any time in the app's Settings or in iOS Settings.</li>
       <li><strong>Delete your data:</strong> delete plants or chats in the app, or delete the app. To ask us to delete analytics, crash or purchase records linked to your install, email us — the app's Settings screen shows the version you're on, and we'll help you find your install ID.</li>
       <li>Depending on where you live (for example in the EU, UK or California) you may have rights to access, correct, delete or object to the processing of your personal data. Email us to use them; we'll answer within 30 days.</li>
